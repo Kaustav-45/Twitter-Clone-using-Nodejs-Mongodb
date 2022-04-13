@@ -1,0 +1,33 @@
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Twitter</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <% if(locals.user){%>
+            <li class="nav-link disabled">
+                <span class="sr-only"></span> Hi   <%= user.name %> </span>
+            </li>
+           
+           <li class="nav-item">
+               <a class="nav-link " href="/users/sign_out" class="ml-4">Log Out</a>
+           </li>
+      <% } else{%>
+         <li class="nav-item">
+             <a class="nav-link" href="/users/sign_in">Sign In</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link " href="/users/sign_up">Sign Out</a>
+         </li>
+     <% } %> 
+
+        
+        
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const homecontroller = require('../controllers/HomeController')
+const userController = require('./users')
+const tweetRouter=require('./tweet')
+const commentRouter = require('./comment')
+router.get('/',homecontroller.root)
+router.use('/users',userController)
+router.use('/tweets',tweetRouter)
+router.use('/comments',commentRouter)
+ module.exports = router
